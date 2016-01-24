@@ -1,5 +1,4 @@
-var App = React.createClass({
-  mixins: [ReactMeteorData],
+App = React.createClass({
   getInitialState(){
     return ({user: null})
   },
@@ -9,7 +8,11 @@ var App = React.createClass({
   },
   render(){
     return(
-
+      <div className="app-root">
+      <Header />
+      {this.props.yield}
+      <Footer />
+      </div>
     );
   }
 });
