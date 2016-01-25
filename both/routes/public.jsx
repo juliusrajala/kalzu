@@ -9,6 +9,6 @@ FlowRouter.route('/example', {
 FlowRouter.route('/', {
   name: "home",
   action: function(){
-    ReactLayout.render(App, {yield: <Progress />})
+    ReactLayout.render(App, {yield: <Dayview />})
   }
 });
