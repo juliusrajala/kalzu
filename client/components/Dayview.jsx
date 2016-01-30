@@ -1,18 +1,20 @@
+var DataSet = [
+  {label:"1:00", data: "Nope"},
+  {label:"2:00", data: "Nope"},
+  {label:"3:00", data: "Nope"},
+  {label:"4:00", data: "Nope"},
+  {label:"5:00", data: "Nope"},
+  {label:"6:00", data: "Nope"},
+  {label:"7:00", data: "Nope"},
+  {label:"8:00", data: "Nope"},
+  {label:"9:00", data: "Nope"},
+  {label:"10:00", data: "Nope"},
+  {label:"11:00", data: "Nope"},
+  {label:"12:00", data: "Nope"}
+];
+
 Dayview = React.createClass({
-  hours: [
-    "00:00-01:00",
-    "01:00-02:00",
-    "02:00-03:00",
-    "03:00-04:00",
-    "04:00-05:00",
-    "05:00-06:00",
-    "06:00-07:00",
-    "07:00-08:00",
-    "08:00-09:00",
-    "09:00-10:00",
-    "10:00-11:00",
-    "11:00-12:00"
-  ],
+  
   renderHourViews(){
     console.log("Rendering hourviews");
     
@@ -21,8 +23,13 @@ Dayview = React.createClass({
     return(
       <div className="dayView">
       <h2>Today</h2>
-      {this.hours.map(function(value){
-        return <Hourview hour={value}/>
+      {DataSet.map(function(set){
+        return(
+          <div className="hourRow">
+          <Hourview hour={set.label}/>
+          <HourContainer hour={set.label}/>
+          </div>
+        );
       })}
       </div>
     );
