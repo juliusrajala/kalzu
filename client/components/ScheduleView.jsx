@@ -13,7 +13,7 @@ var DataSet = [
   {label:"12:00", data: "Nope"}
 ];
 
-Dayview = React.createClass({
+ScheduleView = React.createClass({
   
   renderHourViews(){
     console.log("Rendering hourviews");
@@ -21,8 +21,12 @@ Dayview = React.createClass({
   },
   render(){
     return(
-      <div className="dayView">
-      <h2>Today</h2>
+      <div className="scheduleView">
+        <ul className="scheduleNavigation">
+          <li className="scheduleNavigation"><h2>Day</h2></li>
+          <li className="scheduleNavigation"><h2>Week</h2></li>
+          <li className="scheduleNavigation"><h2>Month</h2></li>
+        </ul>
       {DataSet.map(function(set){
         return(
           <HourRow label={set.label}/>
