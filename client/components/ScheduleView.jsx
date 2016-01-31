@@ -23,9 +23,9 @@ ScheduleView = React.createClass({
     return(
       <div className="scheduleView">
         <ul className="scheduleNavigation">
-          <li className="scheduleNavigation"><h2>Day</h2></li>
-          <li className="scheduleNavigation"><h2>Week</h2></li>
-          <li className="scheduleNavigation"><h2>Month</h2></li>
+          <li className="scheduleNavigation"><h2>DAY</h2></li>
+          <li className="scheduleNavigation"><h2>WEEK</h2></li>
+          <li className="scheduleNavigation"><h2>MONTH</h2></li>
         </ul>
       {DataSet.map(function(set){
         return(

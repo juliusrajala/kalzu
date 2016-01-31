@@ -1,5 +1,6 @@
 HourContainer = React.createClass({
   render(){
+    console.log(this.props.current)
     console.log(this.props.hour);
     console.log(new Date().getHours()%24);
     return(
