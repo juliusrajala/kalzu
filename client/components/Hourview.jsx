@@ -11,7 +11,7 @@ Hourview = React.createClass({
   render(){
     return(
       <div className="hourView">
-      <p>{this.props.hour}{this.getTimeOfDay()}</p>
+      <h3>{this.props.hour}{this.getTimeOfDay()}</h3>
       </div>
     );
   }
